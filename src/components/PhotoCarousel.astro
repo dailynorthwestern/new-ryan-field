@@ -1,0 +1,65 @@
+---
+interface Photo {
+  src: string;
+  alt: string;
+  caption: string;
+  credit: string;
+}
+
+interface Props { photos: Photo[]; }
+const { photos } = Astro.props;
+---
+
+<section class="photo-section" id="photos" aria-labelledby="photos-heading" data-carousel>
+  <div class="section-intro shell">
+    <p class="section-kicker">The view from inside</p>
+    <h2 id="photos-heading">A stadium, reimagined</h2>
+    <p>Move through the first scenes from Northwestern’s new home.</p>
+  </div>
+
+  <div class="gallery-frame">
+    <div class="gallery-track" tabindex="0" aria-label="Photo gallery" data-track>
+      {photos.map((photo, index) => (
+        <figure class="gallery-slide" data-slide aria-label={`Photo ${index + 1} of ${photos.length}`}>
+          <div class="gallery-image-wrap"><img src={photo.src} alt={photo.alt} loading={index === 0 ? 'eager' : 'lazy'} /></div>
+          <figcaption>
+            <span>{photo.caption}</span>
+            <small>{photo.credit}</small>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="gallery-controls shell">
+      <div class="gallery-buttons">
+        <button type="button" data-prev aria-label="Previous photo">←</button>
+        <button type="button" data-next aria-label="Next photo">→</button>
+      </div>
+      <p aria-live="polite"><span data-current>01</span><span class="gallery-divider"></span><span>{String(photos.length).padStart(2, '0')}</span></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector<HTMLElement>('[data-track]');
+    const slides = [...carousel.querySelectorAll<HTMLElement>('[data-slide]')];
+    const current = carousel.querySelector<HTMLElement>('[data-current]');
+    if (!track || !current || slides.length === 0) return;
+    const go = (direction: number) => {
+      const index = Math.round(track.scrollLeft / slides[0].offsetWidth);
+      slides[Math.max(0, Math.min(slides.length - 1, index + direction))]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    };
+    carousel.querySelector('[data-prev]')?.addEventListener('click', () => go(-1));
+    carousel.querySelector('[data-next]')?.addEventListener('click', () => go(1));
+    track.addEventListener('keydown', (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); go(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); go(1); }
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) current.textContent = String(slides.indexOf(entry.target as HTMLElement) + 1).padStart(2, '0');
+      });
+    }, { root: track, threshold: 0.65 });
+    slides.forEach((slide) => observer.observe(slide));
+  });
+</script>

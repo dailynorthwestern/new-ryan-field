@@ -1,0 +1,13 @@
+---
+const { wordmarkSrc } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="header-action header-action--subscribe" href="#coverage">Subscribe</a>
+    <a class="masthead" href="#top" aria-label="The Daily Northwestern home">
+      {wordmarkSrc ? <img src={wordmarkSrc} alt="The Daily Northwestern" /> : <span>The Daily Northwestern</span>}
+    </a>
+    <a class="header-action header-action--donate" href="#coverage">Donate</a>
+  </div>
+</header>

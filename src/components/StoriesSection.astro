@@ -1,0 +1,60 @@
+---
+import StoryCard from './StoryCard.astro';
+interface Story {
+  headline: string;
+  byline: string;
+  date: string;
+  description: string;
+  url: string;
+  image: string;
+  alt: string;
+  tags: string[];
+  featured?: boolean;
+}
+
+interface Props { stories: Story[]; }
+const { stories } = Astro.props;
+const tags = [...new Set(stories.flatMap((story) => story.tags))];
+---
+
+<section class="stories-section" id="coverage" aria-labelledby="stories-heading" data-stories>
+  <div class="stories-heading shell">
+    <div>
+      <p class="section-kicker">The full story</p>
+      <h2 id="stories-heading">Ryan Field coverage</h2>
+    </div>
+    <p>Reporting from The Daily Northwestern on the stadium, the team and the city around them.</p>
+  </div>
+  <div class="tag-filter shell" role="group" aria-label="Filter stories by topic">
+    <button type="button" class="is-active" aria-pressed="true" data-tag="All">All coverage</button>
+    {tags.map((tag) => <button type="button" aria-pressed="false" data-tag={tag}>{tag}</button>)}
+  </div>
+  <div class="stories-grid shell">
+    {stories.map((story, index) => <StoryCard story={story} index={index} />)}
+    <p class="stories-empty" hidden data-empty>No stories match this topic.</p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-stories]').forEach((section) => {
+    const buttons = [...section.querySelectorAll<HTMLButtonElement>('[data-tag]')];
+    const stories = [...section.querySelectorAll<HTMLElement>('[data-story]')];
+    const empty = section.querySelector<HTMLElement>('[data-empty]');
+    if (!empty) return;
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const selected = button.dataset.tag;
+      buttons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      let visible = 0;
+      stories.forEach((story) => {
+        const show = selected === 'All' || story.dataset.tags?.split('|').includes(selected ?? '') === true;
+        story.hidden = !show;
+        if (show) visible += 1;
+      });
+      empty.hidden = visible !== 0;
+    }));
+  });
+</script>

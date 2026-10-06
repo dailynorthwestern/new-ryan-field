@@ -1,0 +1,31 @@
+---
+interface Story {
+  headline: string;
+  byline: string;
+  date: string;
+  description: string;
+  url: string;
+  image: string;
+  alt: string;
+  tags: string[];
+  featured?: boolean;
+}
+
+interface Props { story: Story; index?: number; }
+const { story, index = 0 } = Astro.props;
+---
+
+<article class:list={['story-card', { 'story-card--featured': story.featured }]} data-story data-tags={story.tags.join('|')}>
+  <a class="story-image" href={story.url} aria-hidden="true" tabindex="-1">
+    <img src={story.image} alt={story.alt} loading="lazy" />
+    <span class="story-number">{String(index + 1).padStart(2, '0')}</span>
+  </a>
+  <div class="story-body">
+    <ul class="story-tags" aria-label="Story tags">
+      {story.tags.map((tag) => <li>{tag}</li>)}
+    </ul>
+    <h3><a href={story.url}>{story.headline}</a></h3>
+    <p class="story-description">{story.description}</p>
+    <p class="story-meta"><span>{story.byline}</span><time>{story.date}</time></p>
+  </div>
+</article>

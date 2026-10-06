@@ -1,0 +1,28 @@
+---
+interface TimelineEntry {
+  date: string;
+  title: string;
+  description: string;
+}
+
+interface Props { entries: TimelineEntry[]; }
+const { entries } = Astro.props;
+---
+
+<section class="timeline-section" aria-labelledby="timeline-heading">
+  <div class="timeline-head shell">
+    <p class="section-kicker">From proposal to kickoff</p>
+    <h2 id="timeline-heading">How we got here</h2>
+    <p>Four years of plans, hearings, demolition and construction transformed the site.</p>
+  </div>
+  <ol class="timeline shell">
+    {entries.map((entry, index) => (
+      <li style={`--step: ${String(index + 1).padStart(2, '0')}`}>
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <time>{entry.date}</time>
+        <h3>{entry.title}</h3>
+        <p>{entry.description}</p>
+      </li>
+    ))}
+  </ol>
+</section>
