@@ -10,13 +10,7 @@ interface Props { photos: Photo[]; }
 const { photos } = Astro.props;
 ---
 
-<section class="photo-section" id="photos" aria-labelledby="photos-heading" data-carousel>
-  <div class="section-intro shell">
-    <p class="section-kicker">The view from inside</p>
-    <h2 id="photos-heading">A stadium, reimagined</h2>
-    <p>Move through the first scenes from Northwestern’s new home.</p>
-  </div>
-
+<section class="photo-section" id="photos" aria-labelledby="Ryan Field photo gallery" data-carousel>
   <div class="gallery-frame">
     <div class="gallery-track" tabindex="0" aria-label="Photo gallery" data-track>
       {photos.map((photo, index) => (
