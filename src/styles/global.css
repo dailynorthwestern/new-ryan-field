@@ -11,7 +11,7 @@
   --header-height: 72px;
   --shell: min(1320px, calc(100vw - 64px));
   --burgundy: #5b1d54;
-  font-family: "Libre Franklin", Arial, sans-serif;
+  font-family: "akagi-pro", sans-serif;
   color: var(--ink);
   background: var(--paper);
   font-synthesis: none;
@@ -114,7 +114,7 @@ a {
   border: 0;
   border-radius: 999px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "source-serif-4", serif;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
@@ -145,20 +145,13 @@ a {
 }
 .hero-media {
   object-fit: cover;
+  object-position: center;
   z-index: -3;
-  filter: saturate(0.7) contrast(1.08);
 }
 .hero-scrim {
   z-index: -2;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(29, 2, 53, 0.94) 0%,
-      rgba(29, 2, 53, 0.72) 43%,
-      rgba(29, 2, 53, 0.24) 75%
-    ),
-    linear-gradient(0deg, rgba(15, 4, 25, 0.86) 0%, transparent 60%),
-    rgba(78, 42, 132, 0.2);
+  background-color: var(--purple);
+  opacity: 0.62;
 }
 .hero-rules {
   position: absolute;
@@ -186,6 +179,7 @@ a {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.19em;
+  font-family: "akagi-pro", sans-serif;
 }
 .hero-eyebrow {
   display: flex;
@@ -201,7 +195,7 @@ a {
 .hero h1 {
   max-width: 1000px;
   margin: 0;
-  font-family: "Archivo Black", Impact, sans-serif;
+  font-family: "sporty-pro-inline", sans-serif;
   font-size: clamp(4rem, 11vw, 10.5rem);
   line-height: 0.78;
   letter-spacing: -0.07em;
@@ -225,8 +219,10 @@ a {
 }
 .hero-dek {
   margin: 0;
-  font-family: Georgia, serif;
-  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  font-family: "source-serif-4", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.6vw, 1.65rem);
   line-height: 1.36;
 }
 .hero-byline {
@@ -359,7 +355,7 @@ a {
 .gallery-slide small {
   flex: none;
   color: #aaa5ad;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "akagi-pro", sans-serif;
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -722,16 +718,6 @@ a {
   }
   .hero {
     min-height: calc(100svh - var(--header-height));
-  }
-  .hero-scrim {
-    background:
-      linear-gradient(
-        0deg,
-        rgba(29, 2, 53, 0.96) 0%,
-        rgba(29, 2, 53, 0.62) 68%,
-        rgba(29, 2, 53, 0.25) 100%
-      ),
-      rgba(78, 42, 132, 0.17);
   }
   .hero h1 {
     font-size: clamp(3.7rem, 18vw, 6rem);

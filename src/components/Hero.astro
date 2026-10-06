@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import atmosphere from '../assets/atmosphere.JPG';
+
 const {
-  image,
   eyebrow = 'A Daily Northwestern special project',
   title = 'New Ryan Field',
   dek = 'A new stadium rises in Evanston — and with it, a new chapter in a complicated town-gown story.',
@@ -9,7 +11,7 @@ const {
 ---
 
 <section class="hero" id="top" aria-labelledby="hero-title">
-  <img class="hero-media" src={image} alt="" fetchpriority="high" />
+  <Image class="hero-media" src={atmosphere} alt="" loading="eager" fetchpriority="high" />
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-rules" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="hero-content shell">
