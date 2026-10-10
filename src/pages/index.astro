@@ -4,7 +4,10 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import PhotoCarousel from '../components/PhotoCarousel.astro';
 import StoriesSection from '../components/StoriesSection.astro';
+
 import Timeline from '../components/Timeline.astro';
+const showTimeline = false; 
+
 import { photos } from '../data/photos.js';
 import { timeline } from '../data/timeline.js';
 import { stories } from '../data/stories.js';
@@ -15,7 +18,7 @@ import { stories } from '../data/stories.js';
   <main id="main-content">
     <Hero />
     <PhotoCarousel photos={photos} />
-    <Timeline entries={timeline} />
+    {showTimeline && <Timeline entries={timeline} />}
     <StoriesSection stories={stories} />
   </main>
   <footer class="site-footer">
