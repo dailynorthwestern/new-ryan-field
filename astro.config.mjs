@@ -1,6 +1,7 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://dailynorthwestern.com',
-  output: 'static',
+  site: "https://dailynorthwestern.github.io",
+  base: "/new-ryan-field",
+  output: "static",
 });

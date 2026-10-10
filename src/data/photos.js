@@ -1,6 +1,6 @@
 export const photos = [
   {
-    src: "https://dailynorthwestern.com/2026/10/04/lateststories/its-the-nicest-college-football-stadium-weve-ever-set-foot-in-national-media-react-to-ryan-fields-reopening/#photo",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_8090-1200x800.jpg",
     alt: "Ryan Field's student section",
     caption:
       "Ryan Field's sold-out student section was a highlight for many national media members.",
