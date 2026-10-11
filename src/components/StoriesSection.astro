@@ -29,7 +29,7 @@ const tags = [...new Set(stories.flatMap((story) => story.tags))];
     <button type="button" class="is-active" aria-pressed="true" data-tag="All">All coverage</button>
     {tags.map((tag) => <button type="button" aria-pressed="false" data-tag={tag}>{tag}</button>)}
   </div>
-  <div class="stories-grid shell">
+  <div class="stories-grid stories-grid--featured shell">
     {stories.map((story, index) => <StoryCard story={story} index={index} />)}
     <p class="stories-empty" hidden data-empty>No stories match this topic.</p>
   </div>

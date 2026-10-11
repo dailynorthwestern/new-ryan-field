@@ -16,7 +16,12 @@ const { story, index = 0 } = Astro.props;
 ---
 
 <article class:list={['story-card', { 'story-card--featured': story.featured }]} data-story data-tags={story.tags.join('|')}>
-  <a class="story-image" href={story.url} aria-hidden="true" tabindex="-1">
+  <a
+    class:list={['story-image', story.featured ? 'story-image--featured' : 'story-image--compact']}
+    href={story.url}
+    aria-hidden="true"
+    tabindex="-1"
+  >
     <img src={story.image} alt={story.alt} loading="lazy" />
     <span class="story-number">{String(index + 1).padStart(2, '0')}</span>
   </a>
@@ -25,7 +30,6 @@ const { story, index = 0 } = Astro.props;
       {story.tags.map((tag) => <li>{tag}</li>)}
     </ul>
     <h3><a href={story.url}>{story.headline}</a></h3>
-    <p class="story-description">{story.description}</p>
     <p class="story-meta"><span>{story.byline}</span><time>{story.date}</time></p>
   </div>
 </article>
