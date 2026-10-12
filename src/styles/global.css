@@ -317,8 +317,9 @@ a {
 }
 .gallery-slide figcaption {
   display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
   border-top: 1px solid #5a555d;
   margin-top: 0.75rem;
   padding-top: 0.65rem;
@@ -326,8 +327,13 @@ a {
   font-size: 0.82rem;
   line-height: 1.4;
 }
+.gallery-slide figcaption span {
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  white-space: normal;
+}
 .gallery-slide small {
-  flex: 0 0 36%;
   color: #aaa5ad;
   font-family: "akagi-pro", sans-serif;
   font-size: 0.68rem;
@@ -756,12 +762,10 @@ a {
     flex-basis: 82vw;
   }
   .gallery-slide figcaption {
-    display: block;
     font-size: 0.9rem;
   }
   .gallery-slide small {
-    display: block;
-    margin-top: 0.6rem;
+    margin-top: 0;
   }
   .gallery-controls {
     margin-top: 0.8rem;
