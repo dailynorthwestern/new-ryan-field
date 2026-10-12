@@ -447,7 +447,7 @@ a {
 }
 
 .stories-section {
-  padding: clamp(6rem, 11vw, 10rem) 0;
+  padding: clamp(5rem, 5vw, 8rem) 0;
   background: var(--white);
   border-top: 1px solid #dedbe0;
 }
