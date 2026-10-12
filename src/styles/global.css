@@ -134,7 +134,7 @@ a {
   isolation: isolate;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .hero-media,
 .hero-scrim {
@@ -170,9 +170,14 @@ a {
   border-right: 1px solid rgba(255, 255, 255, 0.16);
 }
 .hero-content {
-  padding-bottom: clamp(6.5rem, 12vh, 10rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+  transform: translateY(35px);
 }
-.hero-eyebrow,
 .section-kicker {
   margin: 0 0 1.25rem;
   text-transform: uppercase;
@@ -181,52 +186,31 @@ a {
   letter-spacing: 0.19em;
   font-family: "akagi-pro", sans-serif;
 }
-.hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.hero-eyebrow::before {
-  content: "";
-  width: 3.5rem;
-  height: 4px;
-  background: var(--purple-light);
-}
 .hero h1 {
-  max-width: 1000px;
-  margin: 0;
-  font-family: "sporty-pro-inline", sans-serif;
-  font-size: clamp(4rem, 11vw, 10.5rem);
-  line-height: 0.78;
-  letter-spacing: -0.07em;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "sporty-pro", sans-serif;
+  font-weight: 800 !important;
+  font-style: normal;
+  font-synthesis: none;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  text-align: center;
   text-transform: uppercase;
-  text-wrap: balance;
-}
-.hero h1 span {
-  display: block;
-  color: var(--purple-light);
-  font-size: 0.43em;
-  letter-spacing: 0.02em;
-  margin: 0 0 0.18em 0.06em;
-}
-.hero-copy {
-  display: grid;
-  grid-template-columns: minmax(250px, 620px) auto;
-  gap: 2.5rem;
-  align-items: end;
-  margin-top: clamp(2rem, 5vh, 4.5rem);
-  padding-left: min(16vw, 220px);
+  white-space: nowrap;
 }
 .hero-dek {
-  margin: 0;
+  margin: clamp(0.25rem, 1.5vh, 1rem) 0 0;
+  max-width: 720px;
   font-family: "vaccine", serif;
   font-weight: 400;
-  /* font-style: italic; */
-  font-size: clamp(1.15rem, 1.6vw, 1.65rem);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.4vw, 1.65rem);
   line-height: 1.36;
 }
 .hero-byline {
-  margin: 0 0 0.25rem;
+  margin: 0;
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -234,39 +218,19 @@ a {
 }
 .scroll-cue {
   position: absolute;
-  right: max(32px, calc((100vw - min(1320px, calc(100vw - 64px))) / 2));
+  left: 50%;
+  right: auto;
   bottom: 2rem;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.65rem;
+  font-size: 2rem;
   letter-spacing: 0.18em;
   font-weight: 800;
-}
-.scroll-cue i {
-  width: 1px;
-  height: 2.5rem;
-  background: white;
-  position: relative;
-  overflow: hidden;
-}
-.scroll-cue i::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--purple-light);
-  animation: scroll-line 2s ease-in-out infinite;
-}
-@keyframes scroll-line {
-  0% {
-    transform: translateY(-100%);
-  }
-  55%,
-  100% {
-    transform: translateY(100%);
-  }
+  text-align: center;
 }
 
 .section-intro,
@@ -663,15 +627,6 @@ a {
   :root {
     --shell: min(100% - 40px, 720px);
   }
-  .hero-content {
-    padding-bottom: 8rem;
-  }
-  .hero-copy {
-    grid-template-columns: 1fr;
-    padding-left: 0;
-    gap: 1.4rem;
-    max-width: 620px;
-  }
   .section-intro,
   .timeline-head {
     grid-template-columns: 1fr 2fr;
@@ -752,19 +707,17 @@ a {
   .hero h1 {
     font-size: clamp(3.7rem, 18vw, 6rem);
     line-height: 0.82;
-  }
-  .hero-content {
-    padding-bottom: 8.5rem;
+    white-space: normal;
+    text-wrap: balance;
   }
   .hero-byline {
     font-size: 0.65rem;
   }
   .scroll-cue {
-    right: 16px;
+    left: 50%;
+    right: auto;
     bottom: 1.5rem;
-  }
-  .scroll-cue span {
-    display: none;
+    transform: translateX(-50%);
   }
   .section-intro,
   .timeline-head,

@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import atmosphere from '../assets/atmosphere.JPG';
 
 const {
-  eyebrow = 'A Daily Northwestern special project',
   title = 'New Ryan Field',
   dek = 'A new stadium rises in Evanston — and with it, a new chapter in a complicated town-gown story.',
   byline = 'By The Daily Northwestern staff',
@@ -15,12 +14,9 @@ const {
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-rules" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="hero-content shell">
-    <p class="hero-eyebrow">{eyebrow}</p>
-    <h1 id="hero-title"><span>New</span> {title.replace(/^New\s+/i, '')}</h1>
-    <div class="hero-copy">
-      <p class="hero-dek">{dek}</p>
-      <p class="hero-byline">{byline}</p>
-    </div>
+    <h1 id="hero-title">{title}</h1>
+    <p class="hero-dek">{dek}</p>
+    <p class="hero-byline">{byline}</p>
   </div>
-  <a class="scroll-cue" href="#photos"><span>Scroll to explore</span><i aria-hidden="true"></i></a>
+  <a class="scroll-cue" href="#photos"><span>↓</span></a>
 </section>
