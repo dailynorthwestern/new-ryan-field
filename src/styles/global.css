@@ -3,7 +3,7 @@
 :root {
   --purple: #4e2a84;
   --purple-light: #b6acd1;
-  --purple-dark: #1d0235;
+  --purple-dark: #501e4c;
   --ink: #17151a;
   --paper: #f6f4ef;
   --white: #fff;
@@ -247,7 +247,7 @@ a {
 .timeline-head h2,
 .stories-heading h2 {
   margin: 0;
-  font-family: "Archivo Black", Impact, sans-serif;
+  font-family: "sporty-pro", sans-serif;
   font-size: clamp(2.8rem, 6vw, 6.8rem);
   line-height: 0.88;
   text-transform: uppercase;
@@ -263,7 +263,7 @@ a {
 }
 
 .photo-section {
-  padding: clamp(6rem, 11vw, 10rem) 0;
+  padding: clamp(3rem, 5vw, 5rem) 0;
   background: var(--ink);
   color: white;
 }
@@ -277,23 +277,32 @@ a {
   margin-top: 0.5rem;
 }
 .gallery-track {
+  --gallery-gap: clamp(0.75rem, 1.25vw, 1.25rem);
   display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: var(--gallery-gap);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  padding: 0 max(32px, calc((100vw - min(1320px, calc(100vw - 64px))) / 2)) 1rem;
+  padding: 0 max(32px, calc((100vw - min(1320px, calc(100vw - 64px))) / 2))
+    0.75rem;
 }
 .gallery-track::-webkit-scrollbar {
   display: none;
 }
 .gallery-slide {
-  flex: 0 0 min(1120px, 82vw);
+  flex: 0 0
+    calc(
+      (
+          min(1320px, calc(100vw - 64px)) - var(--gallery-gap) -
+            var(--gallery-gap) - var(--gallery-gap)
+        ) /
+        4
+    );
   margin: 0;
   scroll-snap-align: start;
 }
 .gallery-image-wrap {
-  height: min(68vh, 720px);
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #2b2530;
 }
@@ -309,15 +318,16 @@ a {
 .gallery-slide figcaption {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 0.75rem;
   border-top: 1px solid #5a555d;
-  margin-top: 1rem;
-  padding-top: 0.9rem;
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
   font-family: Georgia, serif;
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1.4;
 }
 .gallery-slide small {
-  flex: none;
+  flex: 0 0 36%;
   color: #aaa5ad;
   font-family: "akagi-pro", sans-serif;
   font-size: 0.68rem;
@@ -635,6 +645,9 @@ a {
   .timeline-head > p:last-child {
     grid-column: 2;
   }
+  .gallery-slide {
+    flex-basis: calc((100vw - 60px) / 2);
+  }
   .timeline {
     display: block;
     margin-top: 4rem;
@@ -740,10 +753,7 @@ a {
     gap: 12px;
   }
   .gallery-slide {
-    flex-basis: 88vw;
-  }
-  .gallery-image-wrap {
-    height: 56vh;
+    flex-basis: 82vw;
   }
   .gallery-slide figcaption {
     display: block;

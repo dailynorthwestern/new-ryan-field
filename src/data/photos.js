@@ -19,6 +19,18 @@ export const photos = [
     caption: "The 'Cats are now 22-20 overall under head coach David Braun.",
     credit: "Carter Nishi/The Daily Northwestern",
   },
+  {
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/Photo_2-3-1.jpg",
+    alt: "Players and coach David Braun running across the field",
+    caption: "The 'Cats are now 22-20 overall under head coach David Braun.",
+    credit: "Carter Nishi/The Daily Northwestern",
+  },
+  {
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/Photo_2-3-1.jpg",
+    alt: "Players and coach David Braun running across the field",
+    caption: "The 'Cats are now 22-20 overall under head coach David Braun.",
+    credit: "Carter Nishi/The Daily Northwestern",
+  },
   // {
   //   src: "https://dailynorthwestern.com/wp-content/uploads/2026/07/DSC_0700-1-1200x800.jpg",
   //   alt: "Supporters gathered in the stands of a large stadium.",
