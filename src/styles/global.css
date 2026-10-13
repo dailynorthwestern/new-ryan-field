@@ -178,6 +178,32 @@ a {
   text-align: center;
   transform: translateY(35px);
 }
+.hero-overlay {
+  position: absolute;
+  top: 1rem;      
+  left: 7rem;     
+  width: auto;    
+  height: 800px;
+  z-index: 1;
+  object-fit: cover;    
+  object-position: left top ; 
+  pointer-events: none;   
+  z-index: -1;
+  opacity: 0.85;
+}
+.hero-overlay2 {
+  position: absolute;
+  top: 3rem;      
+  right: -14rem;     
+  width: auto;    
+  height: 800px;
+  z-index: 1;
+  object-fit: cover;   
+  object-position: center center ;   
+  pointer-events: none;   
+  z-index: -1;
+  opacity: 0.85;
+}
 .section-kicker {
   margin: 0 0 1.25rem;
   text-transform: uppercase;
@@ -199,6 +225,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+  line-height: 1;
 }
 .hero-dek {
   margin: clamp(0.25rem, 1.5vh, 1rem) 0 0;

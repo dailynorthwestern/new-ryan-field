@@ -2,8 +2,14 @@
 import { Image } from 'astro:assets';
 import atmosphere from '../assets/atmosphere.JPG';
 
+import { Image } from 'astro:assets';
+import retrogfx1 from '../assets/retrogfx1.png';
+
+import { Image } from 'astro:assets';
+import retrogfx2 from '../assets/retrogfx2.png';
+
 const {
-  title = 'New Ryan Field',
+  title = 'New<br> Ryan<br> Field',
   dek = 'A new stadium rises in Evanston — and with it, a new chapter in a complicated town-gown story.',
   byline = 'By The Daily Northwestern staff',
 } = Astro.props;
@@ -12,11 +18,15 @@ const {
 <section class="hero" id="top" aria-labelledby="hero-title">
   <Image class="hero-media" src={atmosphere} alt="" loading="eager" fetchpriority="high" />
   <div class="hero-scrim" aria-hidden="true"></div>
+  <Image class="hero-overlay" src={retrogfx1} alt="" aria-hidden="true" />
+  <Image class="hero-overlay2" src={retrogfx2} alt="" aria-hidden="true" />
   <div class="hero-rules" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="hero-content shell">
-    <h1 id="hero-title">{title}</h1>
+    <h1 id="hero-title" set:html={title}></h1>
     <p class="hero-dek">{dek}</p>
     <p class="hero-byline">{byline}</p>
   </div>
   <a class="scroll-cue" href="#photos"><span>↓</span></a>
 </section>
+
+
