@@ -14,6 +14,7 @@ interface Story {
 interface Props { stories: Story[]; }
 const { stories } = Astro.props;
 const tags = [...new Set(stories.flatMap((story) => story.tags))];
+const initialPageCount = stories.length <= 9 ? 1 : 1 + Math.ceil((stories.length - 9) / 12);
 ---
 
 <section class="stories-section" id="coverage" aria-label="Coverage" data-stories>
@@ -22,9 +23,21 @@ const tags = [...new Set(stories.flatMap((story) => story.tags))];
     {tags.map((tag) => <button type="button" aria-pressed="false" data-tag={tag}>{tag}</button>)}
   </div>
   <div class="stories-grid stories-grid--featured shell">
-    {stories.map((story, index) => <StoryCard story={story} index={index} />)}
+    {stories.map((story, index) => <StoryCard story={story} initiallyVisible={index < 9} />)}
     <p class="stories-empty" hidden data-empty>No stories match this topic.</p>
   </div>
+  <nav class="stories-pagination shell" aria-label="Story pages" data-pagination hidden={initialPageCount <= 1}>
+    {Array.from({ length: initialPageCount }, (_, index) => (
+      <button
+        type="button"
+        class:list={{ 'is-active': index === 0 }}
+        aria-current={index === 0 ? 'page' : undefined}
+        data-page={index + 1}
+      >
+        {index + 1}
+      </button>
+    ))}
+  </nav>
 </section>
 
 <script>
@@ -32,21 +45,73 @@ const tags = [...new Set(stories.flatMap((story) => story.tags))];
     const buttons = [...section.querySelectorAll<HTMLButtonElement>('[data-tag]')];
     const stories = [...section.querySelectorAll<HTMLElement>('[data-story]')];
     const empty = section.querySelector<HTMLElement>('[data-empty]');
-    if (!empty) return;
+    const grid = section.querySelector<HTMLElement>('.stories-grid');
+    const pagination = section.querySelector<HTMLElement>('[data-pagination]');
+    if (!empty || !grid || !pagination) return;
+
+    let selectedTag = 'All';
+    let currentPage = 1;
+
+    const matchesFilter = (story: HTMLElement) =>
+      selectedTag === 'All' || story.dataset.tags?.split('|').includes(selectedTag) === true;
+
+    const setFeaturedLayout = () => {
+      const showFeatured = selectedTag === 'All' && currentPage === 1;
+      stories.forEach((story) => {
+        const isFeatured = showFeatured && story.dataset.featured === 'true';
+        story.classList.toggle('story-card--featured', isFeatured);
+        const image = story.querySelector<HTMLElement>('.story-image');
+        image?.classList.toggle('story-image--featured', isFeatured);
+        image?.classList.toggle('story-image--compact', !isFeatured);
+      });
+    };
+
+    const render = () => {
+      const filteredStories = stories.filter(matchesFilter);
+      const pageCount = selectedTag === 'All'
+        ? (filteredStories.length <= 9 ? 1 : 1 + Math.ceil((filteredStories.length - 9) / 12))
+        : Math.max(1, Math.ceil(filteredStories.length / 12));
+      currentPage = Math.min(currentPage, pageCount);
+
+      const start = selectedTag === 'All'
+        ? (currentPage === 1 ? 0 : 9 + (currentPage - 2) * 12)
+        : (currentPage - 1) * 12;
+      const limit = selectedTag === 'All' && currentPage === 1 ? 9 : 12;
+      const visibleStories = new Set(filteredStories.slice(start, start + limit));
+
+      stories.forEach((story) => { story.hidden = !visibleStories.has(story); });
+      empty.hidden = filteredStories.length !== 0;
+      setFeaturedLayout();
+
+      pagination.hidden = pageCount <= 1;
+      pagination.replaceChildren(...Array.from({ length: pageCount }, (_, index) => {
+        const page = index + 1;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.page = String(page);
+        button.textContent = String(page);
+        button.classList.toggle('is-active', page === currentPage);
+        if (page === currentPage) button.setAttribute('aria-current', 'page');
+        button.addEventListener('click', () => {
+          currentPage = page;
+          render();
+          grid.scrollIntoView({ block: 'start' });
+        });
+        return button;
+      }));
+    };
+
     buttons.forEach((button) => button.addEventListener('click', () => {
-      const selected = button.dataset.tag;
+      selectedTag = button.dataset.tag ?? 'All';
+      currentPage = 1;
       buttons.forEach((item) => {
         const active = item === button;
         item.classList.toggle('is-active', active);
         item.setAttribute('aria-pressed', String(active));
       });
-      let visible = 0;
-      stories.forEach((story) => {
-        const show = selected === 'All' || story.dataset.tags?.split('|').includes(selected ?? '') === true;
-        story.hidden = !show;
-        if (show) visible += 1;
-      });
-      empty.hidden = visible !== 0;
+      render();
     }));
+
+    render();
   });
 </script>

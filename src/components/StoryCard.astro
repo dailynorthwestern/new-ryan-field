@@ -10,11 +10,17 @@ interface Story {
   featured?: boolean;
 }
 
-interface Props { story: Story; index?: number; }
-const { story, index = 0 } = Astro.props;
+interface Props { story: Story; initiallyVisible?: boolean; }
+const { story, initiallyVisible = true } = Astro.props;
 ---
 
-<article class:list={['story-card', { 'story-card--featured': story.featured }]} data-story data-tags={story.tags.join('|')}>
+<article
+  class:list={['story-card', { 'story-card--featured': story.featured }]}
+  data-story
+  data-tags={story.tags.join('|')}
+  data-featured={story.featured ? 'true' : undefined}
+  hidden={!initiallyVisible}
+>
   <a
     class:list={['story-image', story.featured ? 'story-image--featured' : 'story-image--compact']}
     href={story.url}
@@ -22,7 +28,6 @@ const { story, index = 0 } = Astro.props;
     tabindex="-1"
   >
     <img src={story.image} alt={story.alt} loading="lazy" />
-    <span class="story-number">{String(index + 1).padStart(2, '0')}</span>
   </a>
   <div class="story-body">
     <ul class="story-tags" aria-label="Story tags">

@@ -578,16 +578,6 @@ a {
   transform: scale(1.025);
   filter: saturate(1.1);
 }
-.story-number {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0.55rem 0.7rem;
-  background: var(--purple);
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 800;
-}
 .story-tags {
   display: flex;
   gap: 0.5rem;
@@ -644,6 +634,27 @@ a {
   padding: 4rem 0;
   font-family: Georgia, serif;
   font-size: 1.4rem;
+}
+.stories-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+.stories-pagination button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.stories-pagination button.is-active {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
 }
 
 .site-footer {
