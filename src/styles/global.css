@@ -180,11 +180,10 @@ a {
 }
 .hero-overlay {
   position: absolute;
-  top: 1rem;
-  left: 7rem;
+  top: clamp(0.5rem, 2vw, 2rem);
+  left: clamp(-5rem, 0vw, 7rem);
   width: auto;
-  height: 800px;
-  z-index: 1;
+  height: clamp(350px, 45vw, 800px);
   object-fit: cover;
   object-position: left top;
   pointer-events: none;
@@ -193,13 +192,12 @@ a {
 }
 .hero-overlay2 {
   position: absolute;
-  top: 3rem;
-  right: -14rem;
+  top: clamp(1rem, 4vw, 3rem);
+  right: clamp(-14rem, -1vw, -3rem);
   width: auto;
-  height: 800px;
-  z-index: 1;
+  height: clamp(350px, 55vw, 800px);
   object-fit: cover;
-  object-position: center center;
+  object-position: center;
   pointer-events: none;
   z-index: -1;
   opacity: 0.85;
@@ -758,6 +756,15 @@ a {
   }
   .hero-byline {
     font-size: 0.65rem;
+  }
+  .hero-overlay {
+    left: -6rem;
+    height: 400px;
+  }
+
+  .hero-overlay2 {
+    right: -8rem;
+    height: 400px;
   }
   .scroll-cue {
     left: 50%;
