@@ -1,14 +1,14 @@
 export const stories = [
   {
     headline:
-      "Football: Chiles excels at the helm of No. 25 Northwestern, ‘excited’ to face his former team",
+      "Football: Chiles excels at the helm of No. 25 Northwestern, 'excited' to face his former team",
     byline: "Aanya Gupta, Sports Editor",
     date: "October 13, 2026",
     url: "https://dailynorthwestern.com/2026/10/13/sports/football-chiles-excels-at-the-helm-of-no-25-northwestern-excited-to-face-his-former-team/",
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_1063-1200x800.jpg",
     alt: "A player runs holding the football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
     featured: true,
   },
   {
@@ -20,7 +20,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_7-1-1-1200x800.jpg",
     alt: "Players run in celebration.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -31,7 +31,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_0461-1-1-1200x800.jpg",
     alt: "Two players tackle a player holding the football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -42,18 +42,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/PHOTO-1-1-1200x801.jpg",
     alt: "A player runs on the field.",
-    tags: ["All Coverage", "2026 Season"],
-  },
-  {
-    headline:
-      "Gallery: Northwestern defeats Ball State in 45-14 Homecoming victory",
-    byline: "Xuan Day Tran, Diversity and Inclusion Editor",
-    date: "October 11, 2026",
-    url: "https://dailynorthwestern.com/2026/10/11/photo/ball-state-gallery/",
-    image:
-      "https://dailynorthwestern.com/wp-content/uploads/2026/10/PHOTO-4-2.jpg",
-    alt: "A player runs with the ball as their teammate blocks an opposing team player.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Rapid Recap: Northwestern 45, Ball State 14",
@@ -63,7 +52,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/XUAN-PENN-STATE-2-1200x800.jpg",
     alt: "A player grabs a player with the football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "As Ryan Field opens, community focuses on connection",
@@ -73,7 +62,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/Carter_Nishi_1-1-1200x800.jpg",
     alt: "Players high five people in the stands.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline: "Little: Respect Northwestern. Rank the Wildcats",
@@ -83,29 +72,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_8-1-1200x800.jpg",
     alt: "Players walk off the field.",
-    tags: ["All Coverage", "2026 Season"],
-  },
-  {
-    headline:
-      "Gallery: Northwestern thrashes Penn State in Ryan Field’s football debut",
-    byline: "Alex Boyko, Carter Nishi, and Xuan Day Tran",
-    date: "October 5, 2026",
-    url: "https://dailynorthwestern.com/2026/10/05/sports/gallery-northwestern-thrashes-penn-state-in-ryan-fields-football-debut/",
-    image:
-      "https://dailynorthwestern.com/wp-content/uploads/2026/10/Photo_1-10.jpg",
-    alt: "Three opposing players tackle the player with the ball.",
-    tags: ["All Coverage", "2026 Season"],
-  },
-  {
-    headline:
-      "Gallery: New Ryan Field brings buzz to Northwestern community in its opening game",
-    byline: "Alex Boyko, Carter Nishi, and Xuan Day Tran",
-    date: "October 5, 2026",
-    url: "https://dailynorthwestern.com/2026/10/05/sports/gallery-new-ryan-field-brings-buzz-to-northwestern-community-in-its-opening-game/",
-    image:
-      "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_1-1.jpg",
-    alt: "A crowd cheers in the stands.",
-    tags: ["All Coverage", "Ryan Field", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -116,7 +83,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_8145-1200x800.jpg",
     alt: "Players lift their hands up in celebration",
-    tags: ["All Coverage", "2026 Season", "Ryan Field"],
+    tags: ["2026 Season", "Ryan Field"],
   },
   {
     headline:
@@ -127,7 +94,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_8090-1200x800.jpg",
     alt: 'A jumbotron with "Ryan Field" written on a sign above it and "Northwestern" written on it.',
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline:
@@ -138,7 +105,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_6496.JPG-DSC_6465.JPG-DSC_9645-1200x798.jpeg",
     alt: "A person playing the trumpet.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline:
@@ -149,7 +116,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_0507-1200x799.jpg",
     alt: "A stadium field.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline: "Rapid Recap: Northwestern 34, Penn State 13",
@@ -159,7 +126,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_1516-1-e1790997677255-1200x800.jpg",
     alt: "A person runs with the ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -170,7 +137,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_6496.JPG-DSC_6465.JPG-DSC_9645-1200x798.jpeg",
     alt: "A player playing the trumpet.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline: "Q&A: Pat Ryan Jr. talks new $875 million Ryan Field opening",
@@ -180,7 +147,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0621-1200x799.jpg",
     alt: 'The wall of a stadium reading "Ryan Field"',
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline: "Football: Offensive line prepares for season without Oratokhai",
@@ -190,7 +157,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/Chiles-1-1200x814.jpg",
     alt: "A player jumps up as everyone gets back into formation for the next play.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -201,7 +168,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0588-1200x799.jpg",
     alt: 'A hallway that leads to an area with a sign that reads "Purple Line."',
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline:
@@ -212,18 +179,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0497-1-1200x800.jpg",
     alt: "A group of players huddled together",
-    tags: ["All Coverage", "2026 Season"],
-  },
-  {
-    headline:
-      "Captured: Northwestern nearly completes the 4th quarter comeback in thrilling 29-23 loss against Indiana",
-    byline: "Alex Boyko and Josh Singer",
-    date: "September 28, 2026",
-    url: "https://dailynorthwestern.com/2026/09/28/sports/captured-northwestern-nearly-completes-the-4th-quarter-comeback-in-thrilling-29-23-loss-against-indiana/",
-    image:
-      "https://dailynorthwestern.com/wp-content/uploads/2026/09/Hooverstop1-1.jpg",
-    alt: "Players run toward the player holding the ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -234,7 +190,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/Dehnicke3-1200x675.jpg",
     alt: "Players run on the field.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -245,7 +201,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/IMG_7486-1200x800.png",
     alt: "A player tries to tackle a player with the ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Football: Northwestern falls short against No. 5 Indiana",
@@ -255,7 +211,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/IMG_7488-e1790449933350-1200x674.jpg",
     alt: "A player runs with the ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Rapid Recap: Indiana 29, Northwestern 23",
@@ -265,7 +221,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0459-1200x800.jpg",
     alt: "Two players tackle a player holding the football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -276,7 +232,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/IMG_2379-1200x900.jpeg",
     alt: 'A side of the building that reads "Ryan Field"',
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -287,7 +243,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_9725-1200x800.jpg",
     alt: "A player gets ready to punt the ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -298,7 +254,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0089-1200x800.jpg",
     alt: "Two players fight for the football",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -309,7 +265,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_0181-1200x800.jpg",
     alt: "A player and a coach move to high five each other",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -320,7 +276,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_7726-1200x800.jpg",
     alt: "A person wearing a baseball cap and a headset.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -331,7 +287,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_7788-1200x800.jpg",
     alt: "Players run in celebration",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Football: The Gameday Staff’s rest-of-season predictions",
@@ -341,17 +297,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_7793-e1790132185805-1200x800.jpg",
     alt: "A player runs with the football toward a defender.",
-    tags: ["All Coverage", "2026 Season"],
-  },
-  {
-    headline: "Captured: Northwestern routs Colorado in 41-7 lakefront finale",
-    byline: "Carter Nishi, Aanya Gupta, and Alex Boyko",
-    date: "September 22, 2026",
-    url: "https://dailynorthwestern.com/2026/09/22/lateststories/captured-northwestern-routs-colorado-in-41-7-lakefront-finale/",
-    image:
-      "https://dailynorthwestern.com/wp-content/uploads/2026/09/Photo_1.jpg",
-    alt: "A player and coach talk.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Rapid Recap: Northwestern 41, Colorado 7",
@@ -361,7 +307,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/DSC_7835-1200x800.jpg",
     alt: "A person holds a football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -372,7 +318,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2025/12/DSC06997-1200x800.jpg",
     alt: "A person pumps his fist.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -383,7 +329,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/IMG_2397-1200x900.jpg",
     alt: "A scrapbook page.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline:
@@ -394,7 +340,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/07/DSC_0700-1-1200x800.jpg",
     alt: "A stadium construction site.",
-    tags: ["All Coverage", "Ryan Field"],
+    tags: ["Ryan Field"],
   },
   {
     headline: "Football: Northwestern’s unfinished product dazzles in debut",
@@ -404,7 +350,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/EDIT_DSC_9889-1200x675.jpg",
     alt: "Two people run on a football field.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -415,7 +361,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/EDIT_DSC_9885-e1788813188561-1200x800.jpg",
     alt: "People cheer on a field.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Rapid Recap: Northwestern 34, South Dakota State 18",
@@ -425,7 +371,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/09/IMG_7396-1200x801.jpg",
     alt: "A person runs with a football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -436,7 +382,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2025/09/CRS_4494-1200x801.jpg",
     alt: "A football player tackles a player holding the football.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Northwestern not overlooking FCS Week 1 foe South Dakota State",
@@ -446,7 +392,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/02/braun-file1-1200x800.jpg",
     alt: "A person holds their headset.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline: "Football: Northwestern names six captains ahead of 2026 season",
@@ -456,7 +402,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/Photo-5-7-1200x800.jpg",
     alt: "A person catches a ball.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -467,7 +413,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/CHILES-Nicole-Cheah-1200x800.jpg",
     alt: "A person on a purple background with a football helmet.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -478,7 +424,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/DSC06945-1200x800.jpg",
     alt: "A person kisses the trophy they are holding.",
-    tags: ["All Coverage"],
+    tags: [],
   },
   {
     headline: "Football: New-look Northwestern prepares for daunting schedule",
@@ -488,7 +434,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/DSC_0840-1200x799.jpg",
     alt: "People huddled together.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -499,7 +445,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/Braun-1200x973.jpg",
     alt: "A person standing on stage.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
   {
     headline:
@@ -510,6 +456,6 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/08/IMG_3459-1200x900.jpeg",
     alt: "A person standing on stage.",
-    tags: ["All Coverage", "2026 Season"],
+    tags: ["2026 Season"],
   },
 ];

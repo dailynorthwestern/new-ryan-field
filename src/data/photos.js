@@ -1,37 +1,42 @@
 export const photos = [
   {
-    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_8090-1200x800.jpg",
-    alt: "Ryan Field's student section",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/PHOTO-4-2.jpg",
+    alt: "A player runs with the ball as their teammate blocks an opposing team player.",
     caption:
-      "Ryan Field's sold-out student section was a highlight for many national media members.",
-    credit: "Carter Nishi/The Daily Northwestern",
+      "Gallery: Northwestern defeats Ball State in 45-14 Homecoming victory",
+    credit: "Xuan Day Tran, Diversity and Inclusion Editor",
+    url: "https://dailynorthwestern.com/2026/10/11/photo/ball-state-gallery/",
   },
   {
-    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_2-1.jpg",
-    alt: "Football players high-fiving students in the first row",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_1-1.jpg",
+    alt: "A crowd cheers in the stands.",
     caption:
-      "The team ran across the Wildcat Wall high-fiving students after the game ended.",
-    credit: "Carter Nishi/The Daily Northwestern",
+      "Gallery: New Ryan Field brings buzz to Northwestern community in its opening game",
+    credit: "Alex Boyko, Carter Nishi, and Xuan Day Tran",
+    url: "https://dailynorthwestern.com/2026/10/05/sports/gallery-new-ryan-field-brings-buzz-to-northwestern-community-in-its-opening-game/",
   },
   {
-    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/Photo_2-3-1.jpg",
-    alt: "Players and coach David Braun running across the field",
-    caption: "The 'Cats are now 22-20 overall under head coach David Braun.",
-    credit: "Carter Nishi/The Daily Northwestern",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/Photo_1-10.jpg",
+    alt: "Three opposing players tackle the player with the ball.",
+    caption:
+      "Gallery: Northwestern thrashes Penn State in Ryan Field's football debut",
+    credit: "Alex Boyko, Carter Nishi, and Xuan Day Tran",
+    url: "https://dailynorthwestern.com/2026/10/05/sports/gallery-northwestern-thrashes-penn-state-in-ryan-fields-football-debut/",
   },
   {
-    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_9.jpg",
-    alt: "A view of the field from the side.",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/09/Hooverstop1-1.jpg",
+    alt: "Players run toward the player holding the ball.",
     caption:
-      "New Ryan Field marketed the visibility from the stadium’s concourses and the proximity of every seat to the field ahead of Friday's debut game.",
-    credit: "Alex Boyko/The Daily Northwestern",
+      "Captured: Northwestern nearly completes the 4th quarter comeback in thrilling 29-23 loss against Indiana",
+    credit: "Alex Boyko and Josh Singer",
+    url: "https://dailynorthwestern.com/2026/09/28/sports/captured-northwestern-nearly-completes-the-4th-quarter-comeback-in-thrilling-29-23-loss-against-indiana/",
   },
   {
-    src: "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_10.jpg",
-    alt: "Students shout and cheer at the field.",
-    caption:
-      "Wildside and the Wildcat Wall provided an endless supply of energy and a significant home-field advantage in the new stadium’s first game.",
-    credit: "Alex Boyko/The Daily Northwestern",
+    src: "https://dailynorthwestern.com/wp-content/uploads/2026/09/Photo_1.jpg",
+    alt: "A player and coach talk.",
+    caption: "Captured: Northwestern routs Colorado in 41-7 lakefront finale",
+    credit: "Carter Nishi, Aanya Gupta, and Alex Boyko",
+    url: "https://dailynorthwestern.com/2026/09/22/lateststories/captured-northwestern-routs-colorado-in-41-7-lakefront-finale/",
   },
   // {
   //   src: "https://dailynorthwestern.com/wp-content/uploads/2026/07/DSC_0700-1-1200x800.jpg",

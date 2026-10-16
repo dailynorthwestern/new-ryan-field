@@ -4,6 +4,7 @@ interface Photo {
   alt: string;
   caption: string;
   credit: string;
+  url: string;
 }
 
 interface Props { photos: Photo[]; }
@@ -15,9 +16,9 @@ const { photos } = Astro.props;
     <div class="gallery-track" tabindex="0" aria-label="Photo gallery" data-track>
       {photos.map((photo, index) => (
         <figure class="gallery-slide" data-slide aria-label={`Photo ${index + 1} of ${photos.length}`}>
-          <div class="gallery-image-wrap"><img src={photo.src} alt={photo.alt} loading={index === 0 ? 'eager' : 'lazy'} /></div>
+          <a class="gallery-image-wrap" href={photo.url}><img src={photo.src} alt={photo.alt} loading={index === 0 ? 'eager' : 'lazy'} /></a>
           <figcaption>
-            <span>{photo.caption}</span>
+            <a class="gallery-caption-link" href={photo.url}><span>{photo.caption}</span></a>
             <small>{photo.credit}</small>
           </figcaption>
         </figure>
