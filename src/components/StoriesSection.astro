@@ -16,13 +16,7 @@ const { stories } = Astro.props;
 const tags = [...new Set(stories.flatMap((story) => story.tags))];
 ---
 
-<section class="stories-section" id="coverage" aria-labelledby="stories-heading" data-stories>
-  <div class="stories-heading shell">
-    <div>
-      <h2 id="stories-heading">Coverage</h2>
-    </div>
-    <p>Reporting from The Daily Northwestern on the stadium, the team and the city around them.</p>
-  </div>
+<section class="stories-section" id="coverage" aria-label="Coverage" data-stories>
   <div class="tag-filter shell" role="group" aria-label="Filter stories by topic">
     <button type="button" class="is-active" aria-pressed="true" data-tag="All">All coverage</button>
     {tags.map((tag) => <button type="button" aria-pressed="false" data-tag={tag}>{tag}</button>)}
