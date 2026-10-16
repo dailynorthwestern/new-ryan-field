@@ -789,14 +789,18 @@ a {
   .hero-byline {
     font-size: 0.65rem;
   }
-  .hero-overlay {
+  .hero > .hero-overlay {
+    top: auto;
+    bottom: 0;
     left: -6rem;
     height: 400px;
   }
 
   .hero-overlay2 {
+    top: 50%;
     right: -8rem;
     height: 400px;
+    transform: translateY(-50%);
   }
   .scroll-cue {
     left: 50%;
