@@ -180,7 +180,8 @@ a {
 }
 .hero-overlay {
   position: absolute;
-  top: clamp(0.5rem, 2vw, 2rem);
+  top: auto;
+  bottom: 0;
   left: clamp(-5rem, 0vw, 7rem);
   width: auto;
   height: clamp(350px, 45vw, 800px);
@@ -780,8 +781,6 @@ a {
     font-size: 0.65rem;
   }
   .hero > .hero-overlay {
-    top: auto;
-    bottom: -1px;
     left: -6rem;
     height: 400px;
   }
