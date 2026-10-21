@@ -741,6 +741,18 @@ a {
     --header-height: 58px;
     --shell: calc(100vw - 32px);
   }
+  body {
+    /* Keep the same space the in-flow sticky header occupied. */
+    padding-top: var(--header-height);
+  }
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    width: 100%;
+    z-index: 60;
+    isolation: isolate;
+    background: var(--white);
+  }
   .header-inner {
     grid-template-columns: 1fr auto;
   }
