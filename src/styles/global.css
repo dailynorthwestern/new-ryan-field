@@ -537,7 +537,7 @@ a {
   contain: size;
   min-height: 0;
   padding-top: 0;
-  border-bottom: 0;
+  border-bottom: 1px solid #d6d2d8;
 }
 .story-body {
   display: flex;
@@ -660,28 +660,9 @@ a {
 .site-footer {
   background: var(--purple-dark);
   color: white;
-  padding: 3rem 0;
-}
-.footer-inner {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 2rem;
-  align-items: center;
-  font-size: 0.72rem;
-}
-.footer-mark {
-  margin: 0;
-  font-family: Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-}
-.footer-inner p:not(.footer-mark) {
-  margin: 0;
-  color: var(--purple-light);
+  padding: 1.75rem 0;
 }
 .footer-credits {
-  margin-top: 1.5rem;
-  padding: 0.5rem 0;
   color: var(--purple-light);
   font-size: 0.9rem;
   line-height: 1.6;
@@ -747,15 +728,11 @@ a {
     grid-template-rows: auto auto;
     contain: none;
     padding: 0 0 3rem;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 1px solid #d6d2d8;
   }
   .story-image--featured {
     height: auto;
     aspect-ratio: 16 / 10;
-  }
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
   }
 }
 
@@ -781,17 +758,18 @@ a {
     min-height: calc(100svh - var(--header-height));
   }
   .hero h1 {
-    font-size: clamp(3.7rem, 18vw, 6rem);
+    max-width: 100%;
+    font-size: clamp(3rem, 15.5vw, 5rem);
     line-height: 0.82;
-    white-space: normal;
-    text-wrap: balance;
+    text-align: center;
+    white-space: nowrap;
   }
   .hero-byline {
     font-size: 0.65rem;
   }
   .hero > .hero-overlay {
     top: auto;
-    bottom: 0;
+    bottom: -1px;
     left: -6rem;
     height: 400px;
   }

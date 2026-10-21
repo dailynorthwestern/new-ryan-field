@@ -1,6 +1,29 @@
 export const stories = [
   {
     headline:
+      "7th Ward residents criticize, consider solutions for Ryan Field noise",
+    byline: "Isadora Urio Fernandes, Assistant City Editor",
+    date: "October 15, 2026",
+    url: "https://dailynorthwestern.com/2026/10/15/city/7th-ward-residents-criticize-consider-solutions-for-ryan-field-noise/",
+    image:
+      "https://dailynorthwestern.com/wp-content/uploads/2026/10/Alex_Boyko_RyanFile-1200x799.jpg",
+    alt: 'The wall of a stadium reading "Ryan Field"',
+    tags: ["Ryan Field", "Community"],
+    featured: true,
+  },
+  {
+    headline:
+      "Chicago Stars shoot to be 'good neighbors' amid talks of potential move to Ryan Field",
+    byline: "Nora Ahearn and Sarah Schwartz",
+    date: "October 14, 2026",
+    url: "https://dailynorthwestern.com/2026/10/14/city/chicago-stars-shoot-to-be-good-neighbors-amid-talks-of-potential-move-to-ryan-field/",
+    image:
+      "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_9673-1200x801.jpeg",
+    alt: "A kid high fives an adult",
+    tags: ["Ryan Field", "Community"],
+  },
+  {
+    headline:
       "Football: Chiles excels at the helm of No. 25 Northwestern, 'excited' to face his former team",
     byline: "Aanya Gupta, Sports Editor",
     date: "October 13, 2026",
@@ -9,7 +32,6 @@ export const stories = [
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_1063-1200x800.jpg",
     alt: "A player runs holding the football.",
     tags: ["2026 Season"],
-    featured: true,
   },
   {
     headline:
@@ -54,6 +76,7 @@ export const stories = [
     alt: "A player grabs a player with the football.",
     tags: ["2026 Season"],
   },
+
   {
     headline: "As Ryan Field opens, community focuses on connection",
     byline: "Yoni Zacks, Social Media Editor",
@@ -62,7 +85,7 @@ export const stories = [
     image:
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/Carter_Nishi_1-1-1200x800.jpg",
     alt: "Players high five people in the stands.",
-    tags: ["Ryan Field"],
+    tags: ["Ryan Field", "Community"],
   },
   {
     headline: "Little: Respect Northwestern. Rank the Wildcats",
@@ -73,6 +96,28 @@ export const stories = [
       "https://dailynorthwestern.com/wp-content/uploads/2026/10/ATMOSPHERE_8-1-1200x800.jpg",
     alt: "Players walk off the field.",
     tags: ["2026 Season"],
+  },
+  {
+    headline:
+      "Residents wonder how new Ryan Field's opening will change 7th Ward community",
+    byline: "Claire Coffey and Habiba Affo",
+    date: "October 6, 2026",
+    url: "https://dailynorthwestern.com/2026/10/06/city/residents-wonder-how-new-ryan-fields-opening-will-change-7th-ward-community/",
+    image:
+      "https://dailynorthwestern.com/wp-content/uploads/2026/10/DSC_9467-1200x802.jpg",
+    alt: 'A sign that reads "Football Parking, use free shuttle to stadium."',
+    tags: ["Ryan Field", "Community"],
+  },
+  {
+    headline:
+      "Ryan Field reopening brings local Evanston restaurants to Northwestern gamedays",
+    byline: "Samantha Gittinger, Reporter",
+    date: "October 6, 2026",
+    url: "https://dailynorthwestern.com/2026/10/06/city/ryan-field-reopening-brings-local-evanston-restaurants-to-northwestern-gamedays/",
+    image:
+      "https://dailynorthwestern.com/wp-content/uploads/2026/10/LOCAL-VENDORS-Fresh-1200x800.jpeg",
+    alt: `A sign that reads "Vienna Beef Mustard's Last Stand" with a hotdog sits in front of a wall that has a sign reading "Ryan Field."`,
+    tags: ["Ryan Field", "Community"],
   },
   {
     headline:
